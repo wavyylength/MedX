@@ -1,7 +1,7 @@
+Flask
+flask-cors
 torch
 torchvision
 numpy
 opencv-python
 Pillow
-Flask
-opencv-python
