@@ -1,10 +1,7 @@
-fastapi
-uvicorn[standard]
-python-multipart       # for file uploads
-pillow                 # image I/O
+torch
+torchvision
 numpy
 opencv-python
-aiofiles               # for static files if needed
-python-dotenv          # for env vars
-requests               # for HTTP calls if needed
-itsdangerous           # optional for lightweight tokens
+Pillow
+Flask
+opencv-python
