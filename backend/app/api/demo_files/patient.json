@@ -1,27 +1,30 @@
 {
-    "patient_details": {
-        "name": "John Doe",
-        "age": 45,
-        "gender": "Male"
-    },
-    "medical_history": {
-        "symptoms": [
-            "chest pain",
-            "shortness of breath",
-            "dizziness"
-        ],
-        "existing_conditions": [
-            "hypertension",
-            "type 2 diabetes"
-        ],
-        "allergies": [
-            "penicillin"
-        ],
-        "family_history": "Father had a history of heart disease."
-    },
-    "recent_lab_results": {
-        "cholesterol": "220 mg/dL",
-        "blood_pressure": "140/90 mmHg",
-        "blood_sugar": "150 mg/dL"
-    }
+  "patient_details": {
+    "name": "Anjali Sharma",
+    "age": 68,
+    "gender": "Female"
+  },
+  "medical_history": {
+    "symptoms": [
+      "Persistent fatigue and weakness",
+      "Aching joints, especially in knees and wrists",
+      "Increased frequency of urination, particularly at night",
+      "Occasional blurry vision"
+    ],
+    "existing_conditions": [
+      "Osteoporosis (diagnosed 5 years ago)",
+      "Mild hypertension (controlled with medication)"
+    ],
+    "allergies": [
+      "Sulfa drugs"
+    ],
+    "family_history": "Mother had Type 2 Diabetes, Father had hypertension."
+  },
+  "recent_lab_results": {
+    "blood_pressure": "135/85 mmHg",
+    "fasting_blood_sugar": "140 mg/dL",
+    "hba1c": "7.2%",
+    "vitamin_d_level": "18 ng/mL",
+    "esr_erythrocyte_sedimentation_rate": "25 mm/hr"
+  }
 }
