@@ -67,11 +67,10 @@ def generate_prompt(patient_data):
 
     Please provide a structured report covering the following sections. Use clear headings for each section.
     1.  **Potential Illnesses or Conditions:** Analyze the symptoms, medical history, and lab results to suggest potential conditions.
-    2.  **Recommended Precautions:** Provide actionable lifestyle, dietary, and other precautions.
-    3.  **Potential Risk Factors:** Highlight the key risk factors based on the provided data.
-    4.  **Medication Suggestions:** Recommend potential medications that a doctor might consider.
-    
-    Finally, add a clear and prominent disclaimer at the end stating that this is an AI-generated report, not a medical diagnosis, and the patient must consult a qualified healthcare professional.
+    2. **Potential Causes** Recommend potential causes for the conditions
+    3.  **Recommended Precautions:** Provide actionable lifestyle, dietary, and other precautions.
+    4.  **Potential Risk Factors:** Highlight the key risk factors based on the provided data.
+    5.  **Medication Suggestions:** Recommend potential medications that a doctor might consider.
     """
     return prompt
 
@@ -79,7 +78,7 @@ def get_gemini_response(api_key, prompt):
     """Sends the prompt to the Gemini API and gets the response."""
     try:
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel('gemini-pro')
+        model = genai.GenerativeModel('gemini-1.5-flash-latest')
         response = model.generate_content(prompt)
         # Clean up the response text from markdown-like formatting for better PDF rendering
         cleaned_text = response.text.replace('**', '').replace('*', '')
