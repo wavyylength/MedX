@@ -30,6 +30,7 @@ function App() {
   // This function will be passed to the Login component and called on a successful login
   const handleLoginSuccess = () => {
     setIsAuthenticated(true);
+    
   };
 
   return (

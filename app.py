@@ -20,7 +20,7 @@ disease_labels = [
 
 # --------------------------
 # MODEL
-# --------------------------
+# --------------------dddd------
 @st.cache_resource
 def load_model():
     model = densenet121(pretrained=True)
