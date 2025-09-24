@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import './App.css';
 
-// Import all your components, including the new Login component
+// Import all your components (History is now removed)
 import Login from './components/Login.jsx';
 import Navbar from './components/Navbar.jsx';
 import Hero from './components/Hero.jsx';
 import Upload from './components/Upload.jsx';
+import ReportGenerator from './components/ReportGenerator.jsx';
 import Footer from './components/Footer.jsx';
 
-// A new component to hold the main dashboard content for better organization
+// The Dashboard no longer needs to manage history state
 const Dashboard = () => {
   return (
     <>
@@ -16,18 +17,16 @@ const Dashboard = () => {
       <main>
         <Hero />
         <Upload />
+        <ReportGenerator />
+        {/* The <History /> component has been removed */}
       </main>
       <Footer />
     </>
   );
 };
 
-
 function App() {
-  // State to manage if the user is authenticated. It starts as 'false'.
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-  // This function will be passed to the Login component and called on a successful login
   const handleLoginSuccess = () => {
     setIsAuthenticated(true);
   };
@@ -35,10 +34,8 @@ function App() {
   return (
     <div className="App">
       {isAuthenticated ? (
-        // If the user IS authenticated, show the main dashboard
         <Dashboard />
       ) : (
-        // If the user IS NOT authenticated, show the Login page
         <Login onLoginSuccess={handleLoginSuccess} />
       )}
     </div>

@@ -177,3 +177,56 @@ hr.section-divider { margin: 60px 0; border: none; border-top: 2px solid var(--b
   font-weight: 600;
   cursor: pointer;
 }
+/* --- Report Generator Section Styles --- */
+.report-generator-section {
+    background-color: var(--dark-bg-secondary);
+}
+.report-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: flex-start;
+}
+.report-form h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: var(--accent-primary);
+}
+.report-form input, .report-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background-color: var(--dark-bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-family: var(--font-family);
+    box-sizing: border-box;
+}
+.card {
+    background-color: var(--dark-bg-secondary);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+}
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.report-display {
+    min-height: 500px;
+}
+.report-text {
+    white-space: pre-wrap; /* Allows the text to wrap */
+    font-family: var(--font-family);
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+@media (max-width: 992px) {
+    .report-layout { grid-template-columns: 1fr; }
+}

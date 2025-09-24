@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import HorizontalBarChart from './HorizontalBarChart';
+// The import for saveAnalysis is no longer needed
 
 const Upload = () => {
     const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -34,8 +35,12 @@ const Upload = () => {
             if (!response.ok) throw new Error(`Server error: ${response.statusText}`);
             const data = await response.json();
             if (data.error) throw new Error(data.error);
+
             setPredictions(data.predictions);
             setHeatmaps(data.heatmaps || []);
+
+            // The logic to save to history has been removed from this section
+
         } catch (err) {
             setError(`Analysis failed: ${err.message}. Ensure the Python server is running.`);
         } finally {

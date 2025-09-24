@@ -19,3 +19,14 @@ Thumbs.db
 # Data / large files
 backend/app/static/
 backend/app/data/
+
+
+# Environment variables
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Uploads folder
+uploads/
