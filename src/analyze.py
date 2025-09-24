@@ -6,7 +6,7 @@ import base64
 from io import BytesIO
 
 # Import your existing utilities
-from utils import preprocess_image
+from src.utils import preprocess_image
 
 CLASSES = [
     "Atelectasis", "Cardiomegaly", "Effusion", "Infiltration",

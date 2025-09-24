@@ -4,14 +4,14 @@ from werkzeug.utils import secure_filename
 import torch
 
 # Import your project's modules
-from model import load_model
-from analyze import get_predictions_for_api # This function now returns heatmaps too
+from src.model import load_model
+from src.analyze import get_predictions_for_api # This function now returns heatmaps too
 
 # --- CONFIGURATION ---
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
-app = Flask(__name__, template_folder='.')
+app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 
