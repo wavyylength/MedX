@@ -1,6 +1,7 @@
 torch
 torchvision
 numpy
-matplotlib
 opencv-python
 Pillow
+Flask
+opencv-python
