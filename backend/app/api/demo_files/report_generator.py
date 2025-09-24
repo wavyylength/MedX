@@ -6,7 +6,7 @@ import os
 # --- Configuration ---
 # IMPORTANT: Replace "YOUR_API_KEY" with your actual Google AI API key.
 # You can get your key from https://aistudio.google.com/app/apikey
-API_KEY = "AIzaSyCiB83vyRj1DvVv0U4jWoIH8rUlO5kQ20A"
+API_KEY = ""
 
 # Name for the input JSON file
 PATIENT_DATA_FILE = "patient.json"
@@ -70,7 +70,8 @@ def generate_prompt(patient_data):
     2. **Potential Causes** Recommend potential causes for the conditions
     3.  **Recommended Precautions:** Provide actionable lifestyle, dietary, and other precautions.
     4.  **Potential Risk Factors:** Highlight the key risk factors based on the provided data.
-    5.  **Medication Suggestions:** Recommend potential medications that a doctor might consider.
+    4.  **Medication Suggestions:** Recommend potential medications that a doctor might consider.
+    
     """
     return prompt
 
