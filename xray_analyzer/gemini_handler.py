@@ -1,11 +1,13 @@
 import google.generativeai as genai
 import os
 import json
+from dotenv import load_dotenv # ✨ 1. Import load_dotenv
+
+load_dotenv() # ✨ 2. Load the variables from your .env file
 
 # --- Configuration ---
-# ⚠️ IMPORTANT: Paste your actual Google AI API key here for testing.
-# For production, use environment variables.
-API_KEY = "AIzaSyAGy6dv2LTF3zIGokyLgODC1iL3_RjcpuA"
+# ✨ 3. Read the key securely from the environment
+API_KEY = os.environ.get("GEMINI_API_KEY")
 
 def generate_prompt(patient_data):
     """Generates the prompt for the Gemini API from a dictionary."""

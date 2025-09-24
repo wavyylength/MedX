@@ -7,3 +7,4 @@ opencv-python
 Pillow
 google-generativeai
 fpdf
+python-dotenv
