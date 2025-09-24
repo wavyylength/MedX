@@ -5,3 +5,5 @@ torchvision
 numpy
 opencv-python
 Pillow
+google-generativeai
+fpdf
